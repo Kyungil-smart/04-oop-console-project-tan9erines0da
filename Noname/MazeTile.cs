@@ -26,22 +26,51 @@ public class MazeTile
         {
             _tileinfo[i] = map[y+1, x-3 + i];
         }
-        for (int i = 6; i <= 41; i++)
+        for (int i = 6; i <= 41; )
         {
             for (int j = y+2; j <= y+5; j++)
             {
-                for (int k = x-4; k <= x+4; k++)
+                for (int k = x - 4; k <= x + 4; k++)
+                {
                     _tileinfo[i] = map[j, k];
+                    i++;
+                }
             }
         }
         for (int i = 42; i <= 46; i++)
         {
-            _tileinfo[i] = map[y+6, x-3 + i];
+            _tileinfo[i] = map[y+6, x-44+i];
         }
         _tileinfo[47] = map[y+7, x];
-
     }
 
+    public void Writeinfo(MazeTile now, int key, int[,] map) 
+    { //키에 해당하는 위치에 현재 미로타일 정보를 보여지는 맵에 덮어 쓰는 메서드
+        int x = IgniteX(key);
+        int y = IgniteY(key);
+
+        map[y, x] = now._tileinfo[0];
+        for (int i = 1; i <= 5; i++)
+        {
+            map[y + 1, x - 3 + i] = now._tileinfo[i];
+        }
+        for (int i = 6; i <= 41; )
+        {
+            for (int j = y + 2; j <= y + 5; j++)
+            {
+                for (int k = x - 4; k <= x + 4; k++)
+                {
+                    map[j, k] = _tileinfo[i];
+                    i++;
+                }
+            }
+        }
+        for (int i = 42; i <= 46; i++)
+        {
+            map[y + 6, x - 44 +i] = _tileinfo[i];
+        }
+        map[y + 7, x] = _tileinfo[47];
+    }
     public int IgniteX(int x)  //x좌표 점화식
     {
         if (x < 4)

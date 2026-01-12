@@ -16,7 +16,10 @@ public class ScreenManager
     {
         _presentmap = nowmap._mapinfo.path;
         //미로 타일 배치에 따른 수정
-        //
+        for (int i = 1; i <= 19; i++)
+        {
+            nowmap._mazepoint[i].Writeinfo(nowmap._mazepoint[i],i, _presentmap);
+        }//키 정보를 이용하여 보여지는 맵 수정
 
     }
 
@@ -39,6 +42,7 @@ public class ScreenManager
 
             }
         }
+        
     }
 
     public void RendRoad ()
