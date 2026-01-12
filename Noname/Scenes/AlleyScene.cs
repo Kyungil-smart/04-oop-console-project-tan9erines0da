@@ -16,18 +16,45 @@ public class AlleyScene : Scene
 
     }
     public override void Enter() 
-    { 
+    {
+        
+        Alleyscreen.PresentMapUpdate();
         //타일 생성
     }
     public override void Update()
     {
+        
         //키입력 반응
+        if (InputManager.GetKey(ConsoleKey.W))
+        {
+            Alleyscreen.nowmap.MoveW();
+        }
+        if (InputManager.GetKey(ConsoleKey.E))
+        {
+            Alleyscreen.nowmap.MoveE();
+        }
+        if (InputManager.GetKey(ConsoleKey.A))
+        {
+            Alleyscreen.nowmap.MoveA();
+        }
+        if (InputManager.GetKey(ConsoleKey.D))
+        {
+            Alleyscreen.nowmap.MoveD();
+        }
+        if (InputManager.GetKey(ConsoleKey.Z))
+        {
+            Alleyscreen.nowmap.MoveZ();
+        }
+        if (InputManager.GetKey(ConsoleKey.X))
+        {
+            Alleyscreen.nowmap.MoveX();
+        }
+
     }
     public override void Exit() { }
 
     public override void Render()
     {
-        ScreenManager Alleyscreen = new ScreenManager();
         Alleyscreen.PresentMapUpdate();
         Alleyscreen.Rend();  //스크린 매니저에서 편집된 렌더
     }

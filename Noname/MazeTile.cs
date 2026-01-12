@@ -7,6 +7,9 @@ public class MazeTile
     public int _tilenumber;//타일 넘버
     public int[] _tileinfo = new int[48];  //출력에 필요한 정보
 
+    public bool complete = false;
+
+
 
     public MazeTile(int order, int[,] map)
     {
@@ -49,7 +52,7 @@ public class MazeTile
         int x = IgniteX(key);
         int y = IgniteY(key);
 
-        map[y, x] = now._tileinfo[0];
+        map[y, x] = now._tileinfo[0];        
         for (int i = 1; i <= 5; i++)
         {
             map[y + 1, x - 3 + i] = now._tileinfo[i];
@@ -70,6 +73,34 @@ public class MazeTile
             map[y + 6, x - 44 +i] = _tileinfo[i];
         }
         map[y + 7, x] = _tileinfo[47];
+    }
+
+    public void Blank(int goal, int[,] map)
+    {
+        int x = IgniteX(goal);
+        int y = IgniteY(goal);
+
+        map[y, x] = 2;
+        for (int i = 1; i <= 5; i++)
+        {
+            map[y + 1, x - 3 + i] = 2;
+        }
+        for (int i = 6; i <= 41;)
+        {
+            for (int j = y + 2; j <= y + 5; j++)
+            {
+                for (int k = x - 4; k <= x + 4; k++)
+                {
+                    map[j, k] = 2;
+                    i++;
+                }
+            }
+        }
+        for (int i = 42; i <= 46; i++)
+        {
+            map[y + 6, x - 44 + i] = 2;
+        }
+        map[y + 7, x] = 2;
     }
     public int IgniteX(int x)  //x좌표 점화식
     {
