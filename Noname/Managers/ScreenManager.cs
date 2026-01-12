@@ -18,7 +18,7 @@ public class ScreenManager
         //미로 타일 배치에 따른 수정
         for (int i = 1; i <= 19; i++)
         {
-            nowmap._mazepoint[i].Writeinfo(nowmap._mazepoint[i],i, _presentmap);
+            nowmap._mazepoint[i].Writeinfo(nowmap._mazepoint[i], i, _presentmap);
         }//키 정보를 이용하여 보여지는 맵 수정
 
         //골타일 흑색 처리
@@ -26,33 +26,41 @@ public class ScreenManager
         nowmap._mazepoint[nowmap._goaltile].Blank(nowmap._goaltile, _presentmap);
     }
 
-    public void Rend() 
+    public void Rend()
     {
-        
+        Console.Clear();
         Console.SetCursorPosition(0, 0);
         for (int i = 0; i < 30; i++)
-        { 
-            for(int j = 0; j < 49; j++)
+        {
+            for (int j = 0; j < 49; j++)
             {
-                if(_presentmap[i,j]==0) // 길 출력
+                switch (_presentmap[i, j]) // 길 출력
                 {
-                    RendRoad();
-                }
-                else if(_presentmap[i, j] == 2)
-                { 
-                    RendBlank();
-                }
-                else
-                RendWall();
+                    case 1:
+                        RendWall();
+                        break;
+                    case 2:
+                        RendBlank();
+                        break;
+                    case 3:
+                        RendPlayer();
+                        break;
+                    case 4:
+                        RendGoal();
+                        break;
 
+                    default:
+                        RendRoad();
+                        break;
+                }
                 if (j == 48) Console.WriteLine();
 
             }
         }
-        
+
     }
 
-    public void RendRoad ()
+    public void RendRoad()
     {
         Console.BackgroundColor = ConsoleColor.White;
         "  ".Print();
@@ -69,6 +77,20 @@ public class ScreenManager
     public void RendBlank()
     {
         Console.BackgroundColor = ConsoleColor.Black;
+        "  ".Print();
+        Console.ResetColor();
+    }
+
+    public void RendPlayer()
+    {
+        Console.BackgroundColor = ConsoleColor.Yellow;
+        "  ".Print();
+        Console.ResetColor();
+    }
+
+    public void RendGoal()
+    {
+        Console.BackgroundColor = ConsoleColor.Red;
         "  ".Print();
         Console.ResetColor();
     }

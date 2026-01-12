@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 
+
 public class MapManager
 {
     // 맵 상태를 변경하는 것과 관련된 필드와 메서드
@@ -23,12 +24,20 @@ public class MapManager
 
     public MapManager()
     {
+        _playerY = _mapinfo.start[0];
+        _playerX = _mapinfo.start[1];
+        _mapinfo.path[_playerY, _playerX] = (int) Object.Player;
+        _goalY = _mapinfo.end[0];
+        _goalX = _mapinfo.end[1];
+        _mapinfo.path[_goalY, _goalX] = (int) Object.Goal;
+
         //초기 맵 생성, 무작위 셔플
-        int[] start = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 };
+        int[] start = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 };
         Random.Shared.Shuffle(start);
 
         //19개 타일 인스턴스 생성
-        for (int i = 0; i < 19; i++) _mazepoint.Add(i + 1, new MazeTile(start[i], _mapinfo.path));
+        for (int i = 0; i < 18; i++) _mazepoint.Add(i + 1, new MazeTile(start[i], _mapinfo.path));
+        _mazepoint.Add(19, new MazeTile(19, _mapinfo.path));
 
     }
 
@@ -256,4 +265,11 @@ public class MapManager
     }
     
 
+}
+public enum Object
+{
+    Wall =1,
+    Blank,
+    Player,
+    Goal 
 }
