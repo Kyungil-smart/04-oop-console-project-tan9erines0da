@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 public static class TextExtensions
@@ -19,8 +20,10 @@ public static class TextExtensions
 
         Console.Write(character);
 
-        if (color != ConsoleColor.Gray) Console.ResetColor();
+        if (color != ConsoleColor.Gray) Console.ResetColor();               
     }
+
+    
 
     public static int GetTextWidth(this string text)
     {

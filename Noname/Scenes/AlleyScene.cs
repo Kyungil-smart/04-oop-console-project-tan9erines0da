@@ -17,16 +17,18 @@ public class AlleyScene : Scene
     }
     public override void Enter() 
     { 
+        //타일 생성
     }
     public override void Update()
     {
-        
+        //키입력 반응
     }
     public override void Exit() { }
 
     public override void Render()
     {
         ScreenManager Alleyscreen = new ScreenManager();
+        Alleyscreen.PresentMapUpdate();
         Alleyscreen.Rend();  //스크린 매니저에서 편집된 렌더
     }
 

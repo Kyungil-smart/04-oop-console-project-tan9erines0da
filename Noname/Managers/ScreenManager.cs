@@ -1,14 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml.Serialization;
 
 public class ScreenManager
 {
     // 맵 출력과 관련된 필드와 메서드
     MapManager nowmap = new MapManager();
-    Mapdata1 Tempmap = new Mapdata1();
+    public int[,] _presentmap = new int[30, 49]; //보여질 맵 배열
 
 
+
+
+    public void PresentMapUpdate()
+    {
+        _presentmap = nowmap._mapinfo.path;
+        //미로 타일 배치에 따른 수정
+        //
+
+    }
 
     public void Rend() 
     {
@@ -17,21 +27,31 @@ public class ScreenManager
         { 
             for(int j = 0; j < 49; j++)
             {
-                if(Tempmap.path[i,j]==0) // 길 출력
+                if(_presentmap[i,j]==0) // 길 출력
                 {
-                    Console.BackgroundColor = ConsoleColor.White;
-                    "  ".Print();
-                    Console.ResetColor();
+                    RendRoad();
                 }
                 else 
                 { 
-                    Console.BackgroundColor = ConsoleColor.Gray;
-                    "  ".Print();
-                    Console.ResetColor();
+                    RendWall();
                 }
                 if(j==48) Console.WriteLine();
 
             }
         }
+    }
+
+    public void RendRoad ()
+    {
+        Console.BackgroundColor = ConsoleColor.White;
+        "  ".Print();
+        Console.ResetColor();
+    }
+
+    public void RendWall()
+    {
+        Console.BackgroundColor = ConsoleColor.Gray;
+        "  ".Print();
+        Console.ResetColor();
     }
 }
