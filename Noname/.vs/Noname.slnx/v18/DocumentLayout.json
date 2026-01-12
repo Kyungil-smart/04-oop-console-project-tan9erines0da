@@ -64,7 +64,7 @@
               "RelativeDocumentMoniker": "MazeTile.cs",
               "ToolTip": "C:\\Users\\Note-006\\Documents\\GitHub\\04-oop-console-project-tan9erines0da\\Noname\\MazeTile.cs",
               "RelativeToolTip": "MazeTile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAADwvxMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-12T06:12:49.213Z",
               "EditorCaption": ""
@@ -79,8 +79,7 @@
               "RelativeToolTip": "Managers\\MapManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T00:25:17.925Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-09T00:25:17.925Z"
             },
             {
               "$type": "Document",
@@ -92,8 +91,7 @@
               "RelativeToolTip": "Managers\\ScreenManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T00:23:15.21Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-09T00:23:15.21Z"
             },
             {
               "$type": "Document",
@@ -105,8 +103,7 @@
               "RelativeToolTip": "Scenes\\AlleyScene.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAAwAcAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-11T08:21:22.023Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-11T08:21:22.023Z"
             }
           ]
         },
