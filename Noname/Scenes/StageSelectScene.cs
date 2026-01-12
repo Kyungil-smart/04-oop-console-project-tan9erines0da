@@ -17,6 +17,8 @@ public class StageSelectScene : Scene
     public override void Enter()
     {
         _stageselectmenu.Reset();
+        SceneManager.AddScene("AlleyStage", new AlleyScene());
+
     }
     public override void Exit() { }
     public override void Update() 
@@ -45,7 +47,10 @@ public class StageSelectScene : Scene
         _stageselectmenu.Render(8, 5);
     }
 
-    public void AlleyStage() { }
+    public void AlleyStage() 
+    {
+        SceneManager.Change("AlleyStage");
+    }
     public void ForestStage() { }
     public void CalderaStage() { }
 }

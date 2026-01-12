@@ -38,7 +38,6 @@ public class GameManager
         // _player = new PlayerCharacter();
 
         SceneManager.AddScene("Title", new TitleScene());
-        SceneManager.AddScene("StageSelect", new StageSelectScene());
 
         SceneManager.Change("Title");
 

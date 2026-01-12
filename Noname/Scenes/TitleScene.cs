@@ -17,6 +17,8 @@ public class TitleScene : Scene
     public override void Enter()
     {
         _titleMenu.Reset();
+        SceneManager.AddScene("StageSelect", new StageSelectScene());
+
     }
     public override void Update() 
     {
