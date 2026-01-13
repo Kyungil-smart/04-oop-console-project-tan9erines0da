@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Text;
 using System.Xml.Serialization;
 
@@ -231,6 +232,12 @@ public class ScreenManager
             nowmap._mazepoint[18] == 18 &&
             nowmap._mazepoint[19] == 19 )
         return true; 
+        return false;
+    }
+    public bool Stagewin()
+    {
+        if(nowmap._goalX==nowmap._playerX && nowmap._goalY == nowmap._playerY)
+            return true; 
         return false;
     }
 }

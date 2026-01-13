@@ -5,6 +5,7 @@ using System.Text;
 public class AlleyScene : Scene
 {
     private MenuList _pausemenu;
+    private MenuList _clearmenu;
     private ScreenManager Alleyscreen = new ScreenManager();
 
     public AlleyScene()
@@ -12,8 +13,9 @@ public class AlleyScene : Scene
         _pausemenu = new MenuList();
         _pausemenu.Add("계속하기", Return);
         _pausemenu.Add("메뉴로 돌아가기", Exit);
-        Mapdata1 alleyMap = new Mapdata1();
+        _clearmenu = new MenuList();
 
+ 
     }
     public override void Enter() 
     {
@@ -74,6 +76,10 @@ public class AlleyScene : Scene
         
         Alleyscreen.PresentMapUpdate();
         Alleyscreen.Rend();  //스크린 매니저에서 편집된 렌더
+        if(Alleyscreen.Stagewin())
+        {
+
+        }
     }
 
     public void Return() { }
