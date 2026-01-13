@@ -38,11 +38,9 @@ public class ScreenManager
 
             TileUpdate(i, nowmap._mazepoint[i], _presentmap, nowmap._mapinfo.path);
         }//키 정보를 이용하여 보여지는 맵 수정
-
-        
-
-        
+                
     }
+
     public void TileUpdate(int key, int tilenumber, int[,] viewmap, int[,] map)
     {
         
@@ -53,7 +51,7 @@ public class ScreenManager
         int vy = IgniteY(tilenumber);
 
 
-        if (tilenumber == 19)
+        if (tilenumber == 19 && !Allcomplete())
         {
             viewmap[y, x] = 2;
             for (int i = 1; i <= 5; i++)
@@ -81,6 +79,7 @@ public class ScreenManager
         {
             viewmap[y, x] = map[vy, vx];
             for (int i = 1; i <= 5; i++)
+
             {
                 viewmap[y + 1, x - 3 + i] = map[vy + 1, vx - 3 + i];
             }
@@ -208,5 +207,30 @@ public class ScreenManager
         Console.BackgroundColor = ConsoleColor.Red;
         "  ".Print();
         Console.ResetColor();
+    }
+
+    public bool Allcomplete()
+    { 
+        if(nowmap._mazepoint[1]==1&&
+            nowmap._mazepoint[2]==2&&
+            nowmap._mazepoint[3]==3&&
+            nowmap._mazepoint[4] == 4 &&
+            nowmap._mazepoint[5] == 5 &&
+            nowmap._mazepoint[6] == 6 &&
+            nowmap._mazepoint[7] == 7 &&
+            nowmap._mazepoint[8] == 8 &&
+            nowmap._mazepoint[9] == 9 &&
+            nowmap._mazepoint[10] == 10 &&
+            nowmap._mazepoint[11] == 11 &&
+            nowmap._mazepoint[12] == 12 &&
+            nowmap._mazepoint[13] == 13 &&
+            nowmap._mazepoint[14] == 14 &&
+            nowmap._mazepoint[15] == 15 &&
+            nowmap._mazepoint[16] == 16 &&
+            nowmap._mazepoint[17] == 17 &&
+            nowmap._mazepoint[18] == 18 &&
+            nowmap._mazepoint[19] == 19 )
+        return true; 
+        return false;
     }
 }

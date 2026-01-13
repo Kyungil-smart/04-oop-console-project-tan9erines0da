@@ -21,6 +21,7 @@ public class MapManager
 
     public int _goaltile = 19;
 
+    
 
     public MapManager()
     {
