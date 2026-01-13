@@ -7,8 +7,16 @@
       "RelativeMoniker": "D:0:0:{42772618-D1A5-0ECA-E84A-3E69EDE2BB1F}|Noname.csproj|solutionrelative:scenes\\alleyscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{42772618-D1A5-0ECA-E84A-3E69EDE2BB1F}|Noname.csproj|c:\\users\\note-006\\documents\\github\\04-oop-console-project-tan9erines0da\\noname\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42772618-D1A5-0ECA-E84A-3E69EDE2BB1F}|Noname.csproj|solutionrelative:managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{42772618-D1A5-0ECA-E84A-3E69EDE2BB1F}|Noname.csproj|c:\\users\\note-006\\documents\\github\\04-oop-console-project-tan9erines0da\\noname\\managers\\screenmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42772618-D1A5-0ECA-E84A-3E69EDE2BB1F}|Noname.csproj|solutionrelative:managers\\screenmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42772618-D1A5-0ECA-E84A-3E69EDE2BB1F}|Noname.csproj|c:\\users\\note-006\\documents\\github\\04-oop-console-project-tan9erines0da\\noname\\managers\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42772618-D1A5-0ECA-E84A-3E69EDE2BB1F}|Noname.csproj|solutionrelative:managers\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{42772618-D1A5-0ECA-E84A-3E69EDE2BB1F}|Noname.csproj|c:\\users\\note-006\\documents\\github\\04-oop-console-project-tan9erines0da\\noname\\managers\\mapmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,14 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{42772618-D1A5-0ECA-E84A-3E69EDE2BB1F}|Noname.csproj|c:\\users\\note-006\\documents\\github\\04-oop-console-project-tan9erines0da\\noname\\mazetile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42772618-D1A5-0ECA-E84A-3E69EDE2BB1F}|Noname.csproj|solutionrelative:mazetile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42772618-D1A5-0ECA-E84A-3E69EDE2BB1F}|Noname.csproj|c:\\users\\note-006\\documents\\github\\04-oop-console-project-tan9erines0da\\noname\\managers\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42772618-D1A5-0ECA-E84A-3E69EDE2BB1F}|Noname.csproj|solutionrelative:managers\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42772618-D1A5-0ECA-E84A-3E69EDE2BB1F}|Noname.csproj|c:\\users\\note-006\\documents\\github\\04-oop-console-project-tan9erines0da\\noname\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42772618-D1A5-0ECA-E84A-3E69EDE2BB1F}|Noname.csproj|solutionrelative:managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{42772618-D1A5-0ECA-E84A-3E69EDE2BB1F}|Noname.csproj|c:\\users\\note-006\\documents\\github\\04-oop-console-project-tan9erines0da\\noname\\managers\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,8 +58,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 205,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 10,
@@ -74,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "MazeTile.cs",
               "DocumentMoniker": "C:\\Users\\Note-006\\Documents\\GitHub\\04-oop-console-project-tan9erines0da\\Noname\\MazeTile.cs",
               "RelativeDocumentMoniker": "MazeTile.cs",
@@ -82,12 +86,11 @@
               "RelativeToolTip": "MazeTile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-12T06:12:49.213Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-12T06:12:49.213Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "MapManager.cs",
               "DocumentMoniker": "C:\\Users\\Note-006\\Documents\\GitHub\\04-oop-console-project-tan9erines0da\\Noname\\Managers\\MapManager.cs",
               "RelativeDocumentMoniker": "Managers\\MapManager.cs",
@@ -95,8 +98,7 @@
               "RelativeToolTip": "Managers\\MapManager.cs",
               "ViewState": "AgIAADsAAAAAAAAAAAAQwBcAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T00:25:17.925Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-09T00:25:17.925Z"
             },
             {
               "$type": "Document",
@@ -106,7 +108,7 @@
               "RelativeDocumentMoniker": "Scenes\\AlleyScene.cs",
               "ToolTip": "C:\\Users\\Note-006\\Documents\\GitHub\\04-oop-console-project-tan9erines0da\\Noname\\Scenes\\AlleyScene.cs",
               "RelativeToolTip": "Scenes\\AlleyScene.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAQwFMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-11T08:21:22.023Z",
               "EditorCaption": ""
@@ -115,7 +117,7 @@
         },
         {
           "DockedWidth": 195,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -131,15 +133,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\Note-006\\Documents\\GitHub\\04-oop-console-project-tan9erines0da\\Noname\\Managers\\GameManager.cs",
               "RelativeDocumentMoniker": "Managers\\GameManager.cs",
               "ToolTip": "C:\\Users\\Note-006\\Documents\\GitHub\\04-oop-console-project-tan9erines0da\\Noname\\Managers\\GameManager.cs",
               "RelativeToolTip": "Managers\\GameManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAwAcAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T00:19:35.759Z"
+              "WhenOpened": "2026-01-09T00:19:35.759Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -191,20 +194,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ScreenManager.cs",
               "DocumentMoniker": "C:\\Users\\Note-006\\Documents\\GitHub\\04-oop-console-project-tan9erines0da\\Noname\\Managers\\ScreenManager.cs",
               "RelativeDocumentMoniker": "Managers\\ScreenManager.cs",
               "ToolTip": "C:\\Users\\Note-006\\Documents\\GitHub\\04-oop-console-project-tan9erines0da\\Noname\\Managers\\ScreenManager.cs",
               "RelativeToolTip": "Managers\\ScreenManager.cs",
-              "ViewState": "AgIAANcAAAAAAAAAAAAQwPEAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAOIAAAAAAAAAAAAAAPMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T00:23:15.21Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-09T00:23:15.21Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "SceneManager.cs",
               "DocumentMoniker": "C:\\Users\\Note-006\\Documents\\GitHub\\04-oop-console-project-tan9erines0da\\Noname\\Managers\\SceneManager.cs",
               "RelativeDocumentMoniker": "Managers\\SceneManager.cs",
@@ -212,8 +214,7 @@
               "RelativeToolTip": "Managers\\SceneManager.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAnwDMAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-11T03:20:47.821Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-11T03:20:47.821Z"
             }
           ]
         }

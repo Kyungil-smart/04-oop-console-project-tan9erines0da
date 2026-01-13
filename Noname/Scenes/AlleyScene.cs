@@ -76,10 +76,7 @@ public class AlleyScene : Scene
         
         Alleyscreen.PresentMapUpdate();
         Alleyscreen.Rend();  //스크린 매니저에서 편집된 렌더
-        if(Alleyscreen.Stagewin())
-        {
-
-        }
+        
     }
 
     public void Return() { }
