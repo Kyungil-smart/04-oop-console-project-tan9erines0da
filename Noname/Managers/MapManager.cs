@@ -9,8 +9,8 @@ public class MapManager
     // 맵 상태를 변경하는 것과 관련된 필드와 메서드
 
     public Mapdata1 _mapinfo = new Mapdata1(); //원래 맵정보
-    public Dictionary<int, MazeTile> _mazepoint = new Dictionary<int, MazeTile>();
-    // 좌표를 딕셔너리의 키로 좌표에 있는 미로 타일의 정보 관리
+    public Dictionary<int, int> _mazepoint = new Dictionary<int, int>();
+    // 좌표를 딕셔너리의 키로 좌표에 있는 미로 타일 넘버
 
 
     public int _playerY;
@@ -33,11 +33,12 @@ public class MapManager
 
         //초기 맵 생성, 무작위 셔플
         int[] start = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 };
-        Random.Shared.Shuffle(start);
+        Random random = new Random();
+        random.Shuffle(start);
 
         //19개 타일 인스턴스 생성
-        for (int i = 0; i < 18; i++) _mazepoint.Add(i + 1, new MazeTile(start[i], _mapinfo.path));
-        _mazepoint.Add(19, new MazeTile(19, _mapinfo.path));
+        for (int i = 0; i < 18; i++) _mazepoint.Add(i + 1, start[i]);
+        _mazepoint.Add(19, 19);
 
     }
 
@@ -96,9 +97,9 @@ public class MapManager
         { 
         int _next = XYtoKey(KeytoXY(_goaltile, false) + 1, KeytoXY(_goaltile, true));
 
-            MazeTile Temp = _mazepoint[_goaltile];
-            _mazepoint[_goaltile] = _mazepoint[_next];
-            _mazepoint[_next] = Temp;
+            int a = _mazepoint[_next];
+            _mazepoint[_goaltile] = a;
+            _mazepoint[_next] = 19;
 
             _goaltile = _next;
         }
@@ -113,9 +114,9 @@ public class MapManager
         {
             int _next = XYtoKey(KeytoXY(_goaltile, false) + 1, KeytoXY(_goaltile, true)-1);
 
-            MazeTile Temp = _mazepoint[_goaltile];
-            _mazepoint[_goaltile] = _mazepoint[_next];
-            _mazepoint[_next] = Temp;
+            int a = _mazepoint[_next];
+            _mazepoint[_goaltile] = a;
+            _mazepoint[_next] = 19;
 
             _goaltile = _next;
         }
@@ -129,9 +130,9 @@ public class MapManager
         {
             int _next = XYtoKey(KeytoXY(_goaltile, false) , KeytoXY(_goaltile, true) + 1);
 
-            MazeTile Temp = _mazepoint[_goaltile];
-            _mazepoint[_goaltile] = _mazepoint[_next];
-            _mazepoint[_next] = Temp;
+            int a = _mazepoint[_next];
+            _mazepoint[_goaltile] = a;
+            _mazepoint[_next] = 19;
 
             _goaltile = _next;
         }
@@ -145,9 +146,9 @@ public class MapManager
         {
             int _next = XYtoKey(KeytoXY(_goaltile, false), KeytoXY(_goaltile, true) - 1);
 
-            MazeTile Temp = _mazepoint[_goaltile];
-            _mazepoint[_goaltile] = _mazepoint[_next];
-            _mazepoint[_next] = Temp;
+            int a = _mazepoint[_next];
+            _mazepoint[_goaltile] = a;
+            _mazepoint[_next] = 19;
 
             _goaltile = _next;
         }
@@ -162,9 +163,9 @@ public class MapManager
         {
             int _next = XYtoKey(KeytoXY(_goaltile, false)-1, KeytoXY(_goaltile, true) + 1);
 
-            MazeTile Temp = _mazepoint[_goaltile];
-            _mazepoint[_goaltile] = _mazepoint[_next];
-            _mazepoint[_next] = Temp;
+            int a = _mazepoint[_next];
+            _mazepoint[_goaltile] = a;
+            _mazepoint[_next] = 19;
 
             _goaltile = _next;
         }
@@ -178,9 +179,9 @@ public class MapManager
         {
             int _next = XYtoKey(KeytoXY(_goaltile, false)-1, KeytoXY(_goaltile, true));
 
-            MazeTile Temp = _mazepoint[_goaltile];
-            _mazepoint[_goaltile] = _mazepoint[_next];
-            _mazepoint[_next] = Temp;
+            int a = _mazepoint[_next];
+            _mazepoint[_goaltile] = a;
+            _mazepoint[_next] = 19;
 
             _goaltile = _next;
         }

@@ -71,6 +71,7 @@ public class AlleyScene : Scene
 
     public override void Render()
     {
+        
         Alleyscreen.PresentMapUpdate();
         Alleyscreen.Rend();  //스크린 매니저에서 편집된 렌더
     }

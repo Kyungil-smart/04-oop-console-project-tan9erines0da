@@ -1,0 +1,5 @@
+https://github.com/Kyungil-smart/04-oop-console-project-tan9erines0da
+
+조작 방법 맵 
+타일 이동 weadzx 6방향 미로 타일이 해당 방향에 검은색 빈공간이 있으면 빈 공간으로 이동 됨
+플레이어 이동 방향키로 이동

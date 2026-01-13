@@ -11,24 +11,139 @@ public class ScreenManager
 
 
 
-
+    public ScreenManager()
+    {
+        for (int i = 0; i < 30; i++)
+        {
+            for (int j = 0; j < 49; j++)
+            {
+                _presentmap[i, j] = nowmap._mapinfo.path[i, j];
+            }
+        }
+    }
+    
     public void PresentMapUpdate()
     {
-        _presentmap = nowmap._mapinfo.path;
+
+        for (int i = 0; i < 30; i++)
+        {
+            for (int j = 0; j < 49; j++)
+            {
+                _presentmap[i, j] = nowmap._mapinfo.path[i, j];
+            }
+        }
         //미로 타일 배치에 따른 수정
         for (int i = 1; i <= 19; i++)
         {
-            nowmap._mazepoint[i].Writeinfo(nowmap._mazepoint[i], i, _presentmap);
+
+            TileUpdate(i, nowmap._mazepoint[i], _presentmap, nowmap._mapinfo.path);
         }//키 정보를 이용하여 보여지는 맵 수정
 
-        //골타일 흑색 처리
+        
 
-        nowmap._mazepoint[nowmap._goaltile].Blank(nowmap._goaltile, _presentmap);
+        
+    }
+    public void TileUpdate(int key, int tilenumber, int[,] viewmap, int[,] map)
+    {
+        
+
+        int x = IgniteX(key);  // 타일 순서에 따른 출력 시작점
+        int y = IgniteY(key);
+        int vx = IgniteX(tilenumber);  // 타일 넘버에 따른 출력 시작점
+        int vy = IgniteY(tilenumber);
+
+
+        if (tilenumber == 19)
+        {
+            viewmap[y, x] = 2;
+            for (int i = 1; i <= 5; i++)
+            {
+                viewmap[y + 1, x - 3 + i] = 2;
+            }
+            for (int i = 6; i <= 41;)
+            {
+                for (int j = y + 2; j <= y + 5; j++)
+                {
+                    for (int k = x - 4; k <= x + 4; k++)
+                    {
+                        viewmap[j, k] = 2;
+                        i++;
+                    }
+                }
+            }
+            for (int i = 42; i <= 46; i++)
+            {
+                viewmap[y + 6, x - 44 + i] = 2;
+            }
+            viewmap[y + 7, x] = 2;
+        }
+        else
+        {
+            viewmap[y, x] = map[vy, vx];
+            for (int i = 1; i <= 5; i++)
+            {
+                viewmap[y + 1, x - 3 + i] = map[vy + 1, vx - 3 + i];
+            }
+
+            for (int i = 6; i <= 14; i++)
+            {
+                viewmap[y + 2, x - 10 + i] = map[vy + 2, vx - 10 + i];
+            }
+
+            for (int i = 15; i <= 23; i++)
+            {
+                viewmap[y + 3, x - 19 + i] = map[vy + 3, vx - 19 + i];
+            }
+
+            for (int i = 24; i <= 32; i++)
+            {
+                viewmap[y + 4, x - 28 + i] = map[vy + 4, vx - 28 + i];
+            }
+
+            for (int i = 33; i <= 41; i++)
+            {
+                viewmap[y + 5, x - 37 + i] = map[vy + 5, vx - 37 + i];
+            }
+
+            for (int i = 42; i <= 46; i++)
+            {
+                viewmap[y + 6, x - 44 + i] = map[vy + 6, vx - 44 + i];
+            }
+            viewmap[y + 7, x] = map[vy + 7, vx];
+        }
+        
+    }
+    public int IgniteX(int x)  //x좌표 점화식
+    {
+        if (x < 4)
+            return 10 * x + 4;
+        else if (x < 8)
+            return 10 * (x - 4) + 9;
+        else if (x < 13)
+            return 10 * (x - 8) + 4;
+        else if (x < 17)
+            return 10 * (x - 13) + 9;
+        else
+            return 10 * (x - 16) + 4;
+
     }
 
+    public int IgniteY(int y)  //y좌표 점화식
+    {
+        if (y < 4)
+            return 1;
+        else if (y < 8)
+            return 6;
+        else if (y < 13)
+            return 11;
+        else if (y < 17)
+            return 16;
+        else
+            return 21;
+    }
     public void Rend()
     {
-        Console.Clear();
+        
         Console.SetCursorPosition(0, 0);
         for (int i = 0; i < 30; i++)
         {
