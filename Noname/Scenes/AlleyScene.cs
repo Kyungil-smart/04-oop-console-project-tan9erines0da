@@ -49,6 +49,22 @@ public class AlleyScene : Scene
         {
             Alleyscreen.nowmap.MoveX();
         }
+        if (InputManager.GetKey(ConsoleKey.UpArrow))
+        {
+            Alleyscreen.nowmap.PlayerMoveUp();
+        }
+        if (InputManager.GetKey(ConsoleKey.DownArrow))
+        {
+            Alleyscreen.nowmap.PlayerMoveDown();
+        }
+        if (InputManager.GetKey(ConsoleKey.LeftArrow))
+        {
+            Alleyscreen.nowmap.PlayerMoveLeft();
+        }
+        if (InputManager.GetKey(ConsoleKey.RightArrow))
+        {
+            Alleyscreen.nowmap.PlayerMoveRight();
+        }
 
     }
     public override void Exit() { }

@@ -41,6 +41,51 @@ public class MapManager
 
     }
 
+    public bool moveable(int nexty, int nextx)
+    {//이동 가능 여부 판단
+        if (_mapinfo.path[nexty, nextx] == 1)
+            return false;
+        else
+            return true;
+    }
+    public void PlayerMoveUp()
+    {
+        //-1/0 좌표 이동
+        int next = _playerY - 1;
+        if (!moveable(next, _playerX)) return;
+        _mapinfo.path[_playerY, _playerX] = 0;
+        _mapinfo.path[next, _playerX] = (int)Object.Player;
+        _playerY = next;
+    }
+    public void PlayerMoveDown()
+    {
+        //+1/0 좌표 이동
+        int next = _playerY + 1;
+        if (!moveable(next, _playerX)) return;
+        _mapinfo.path[_playerY, _playerX] = 0;
+        _mapinfo.path[next, _playerX] = (int)Object.Player;
+        _playerY = next;
+    }
+
+    public void PlayerMoveLeft()
+    {
+        //0/-1 좌표 이동
+        int next = _playerX - 1;
+        if (!moveable(_playerY, next)) return;
+        _mapinfo.path[_playerY, _playerX] = 0;
+        _mapinfo.path[_playerY, next] = (int)Object.Player;
+        _playerX = next;
+    }
+
+    public void PlayerMoveRight()
+    {
+        //0/+1 좌표 이동
+        int next = _playerX + 1;
+        if (!moveable(_playerY, next)) return;
+        _mapinfo.path[_playerY, _playerX] = 0;
+        _mapinfo.path[_playerY, next] = (int)Object.Player;
+        _playerX = next;
+    }
     // 움직임에 관한 메서드 구현 딕셔너리 내에서 자료 수정하는 형식
     public void MoveW()
     {
